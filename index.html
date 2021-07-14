@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Read More or Less Button</title>
+</head>
+
+<body>
+    <h1>Lorem ipsum dolor sit amet.</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur enim hic nesciunt ea nisi quis est nam esse maiores eos veritatis <span id="dot">...</span> <span id="more">doloremque nobis eveniet illum amet fugit ex, commodi totam adipisci! Officia vel cupiditate nesciunt.</span>
+    </p>
+    <button type="button" id="read" onclick="read()">Read more</button>
+
+    <script type="text/javascript">
+        let i = 0;
+
+        function read() {
+            if (!i) {
+                document.getElementById("more").style.
+                display = "inline";
+                document.getElementById("dots").style.display = "none";
+                document.getElementById("read").innerHTML = "Read less";
+
+                i = 1;
+            } else {
+                document.getElementById("more").style.
+                display = "none";
+                document.getElementById("dots").style.display = "inline";
+                document.getElementById("read").innerHTML = "Read more";
+                i = 0;
+            }
+        }
+    </script>
+
+</body>
+
+</html>
